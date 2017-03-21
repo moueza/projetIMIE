@@ -44,13 +44,6 @@
 			<version>4.0.0-b03</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/com.sun.el/el-ri -->
-		<dependency>
-			<groupId>com.sun.el</groupId>
-			<artifactId>el-ri</artifactId>
-			<version>1.0</version>
-		</dependency>
-
 	</dependencies>
 	<build>
 		<finalName>GestionTournoi</finalName>
