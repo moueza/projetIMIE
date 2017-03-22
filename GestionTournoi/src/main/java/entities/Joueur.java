@@ -1,11 +1,13 @@
 package entities;
 
+import javax.persistence.Entity;
+
 /**
  * Classe entité représentant un Joueur
  * 
  * @class 	Joueur
- * @author 	alexis.poe11
  */
+@Entity
 public class Joueur {
 	
 	/**

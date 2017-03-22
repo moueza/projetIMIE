@@ -1,7 +1,17 @@
 package entities;
 
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+/**
+ * Classe entité représentant une Nation
+ * 
+ * @class Nation
+ */
+@Entity
 public class Nation {
 	
+	@Id
 	private Integer idNation;
 	
 	/**
