@@ -10,7 +10,37 @@ public class ConnectionController implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
-	public String print() {
-		return "connection.xhtml";
+	private String pseudo;
+	private String password;
+
+	public String traitementConnection() {
+
+		return "/WEB-INF/player";
+	}
+
+	public String home() {
+
+		return "connection";
+	}
+
+	public String ajoutJoueur() {
+
+		return "/WEB-INF/player";
+	}
+
+	public String getPseudo() {
+		return pseudo;
+	}
+
+	public void setPseudo(String pseudo) {
+		this.pseudo = pseudo;
+	}
+
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 }
