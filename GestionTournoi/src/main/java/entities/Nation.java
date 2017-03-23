@@ -1,13 +1,26 @@
 package entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "nation")
 public class Nation {
 	
+	@Id
+	@Column(name = "id", nullable = false, unique = true)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private Integer idNation;
 	
 	/**
 	 * Instance de {@link String} correspondant au libelé de la Nation.
 	 */
-	private String 	libele;
+	@Column(name = "libelleNation", length = 50)
+	private String 	libelle;
 	
 	/**
 	 * Constructeur à vide de Nation
@@ -21,16 +34,16 @@ public class Nation {
 	 * 
 	 * @param libele libelé
 	 */
-	public Nation(String libele) {
+	public Nation(String libelle) {
 		super();
-		this.libele = libele;
+		this.libelle = libelle;
 	}
 
-	public String getLibele() {
-		return libele;
+	public String getlibelle() {
+		return libelle;
 	}
 
-	public void setLibele(String libele) {
-		this.libele = libele;
+	public void setlibelle(String libelle) {
+		this.libelle = libelle;
 	}
 }

@@ -1,26 +1,38 @@
 package entities;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 /**
  * Classe entité représentant un Joueur
  * 
  * @class 	Joueur
  * @author 	alexis.poe11
  */
+@Entity
+@Table(name = "joueur")
 public class Joueur extends Opposant{
 	
 	/**
 	 * Instance de {@link String} correspondant au nom d'un joueur.
 	 */
+	@Column(name = "nom", length = 50)
 	public String nom;
 	
 	/**
 	 * Instance de {@link String} correspondant au prénom d'un joueur.
 	 */
+	@Column(name = "prenom", length = 50)
 	public String prenom;
 	
 	/**
 	 * Instance de {@link enum.Sexe} correspondant au genre d'un joueur.
 	 */
+	@Column(name = "sexe", length = 50)
 	public Sexe	sexe;
 	
 	/**
