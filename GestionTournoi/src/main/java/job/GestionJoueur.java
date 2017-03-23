@@ -3,6 +3,8 @@ package job;
 import java.util.List;
 
 import entities.Joueur;
+import entities.Nation;
+import entities.Sexe;
 
 public interface GestionJoueur {
 
@@ -16,7 +18,7 @@ public interface GestionJoueur {
 	 * @return retourne une chaine de caractère contenant sois: "joueur
 	 *         enregistre", sois: "error in registration"
 	 */
-	public String ajoutJoueur(String nom, String prenom);
+	public String ajoutJoueur(String nom, String prenom, Nation nation, Sexe sexe);
 	
 	/**
 	 * Permet de récupérer la liste des joueurs enregistré dans la base de donnée

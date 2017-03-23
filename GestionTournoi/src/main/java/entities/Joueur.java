@@ -6,7 +6,7 @@ package entities;
  * @class 	Joueur
  * @author 	alexis.poe11
  */
-public class Joueur {
+public class Joueur extends Opposant{
 	
 	/**
 	 * Instance de {@link String} correspondant au nom d'un joueur.

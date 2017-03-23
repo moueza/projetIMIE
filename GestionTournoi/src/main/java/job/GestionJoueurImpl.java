@@ -8,6 +8,8 @@ import java.util.regex.Pattern;
 import dao.GestionJoueurDao;
 import dao.GestionJoueurDaoImpl;
 import entities.Joueur;
+import entities.Nation;
+import entities.Sexe;
 
 public class GestionJoueurImpl implements GestionJoueur {
 	
@@ -25,13 +27,15 @@ public class GestionJoueurImpl implements GestionJoueur {
 	 * Ajout joueur s'occupe d'ajouter un joueur à la bdd
 	 */
 	@Override
-	public String ajoutJoueur(String nom, String prenom) {
+	public String ajoutJoueur(String nom, String prenom, Nation nation, Sexe sexe) {
 		if (isboolVerifierNonNull(nom, prenom)) {
 			if(isboolVerifierChampsNonVide(nom, prenom)){
-				if(isboolVerifierChampsNonVide(nom, prenom)){
+				if(isboolVerifierPasDeCaractereSpe(nom, prenom)){
+					Joueur joueur = new Joueur(nom, prenom, sexe, nation);
+					
 					GestionJoueurDao joueurDao = GestionJoueurDaoImpl.getInstance();
-					joueurDao.ajoutJoueurBdd(nom, prenom);
-			return "joueur enregistre";
+					joueurDao.ajoutJoueurBdd(joueur);
+					return "joueur enregistre";
 				}
 			}
 		}
@@ -89,7 +93,8 @@ public class GestionJoueurImpl implements GestionJoueur {
 	 * @return boolean true si les champs sont renseigné, false si ils sont vide
 	 */
 	public boolean isboolVerifierChampsNonVide(String nom, String prenom) {
-		if (nom.isEmpty() && prenom.isEmpty()) {
+		
+		if (nom.equals("") || prenom == "") {
 			return false;
 		} else {
 			return true;
@@ -103,6 +108,8 @@ public class GestionJoueurImpl implements GestionJoueur {
 	 */
 	public List<Joueur> getListJoueur() {
 		List<Joueur> listJoueur = new ArrayList<Joueur>();
-		return listJoueur;
+		GestionJoueurDao joueurDao = GestionJoueurDaoImpl.getInstance();
+		
+		return joueurDao.getListJoueur();
 	}
 }
