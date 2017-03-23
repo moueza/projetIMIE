@@ -17,30 +17,40 @@
 		rel="stylesheet" />
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		
+		<link
+		href="css/cssCommun.css" rel="stylesheet" />
 </h:head>
 <h:body>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
 				<h:form>
-					<h:commandLink class="navbar-brand" action="#{connectionController.home}">
-						<h:graphicImage value="/WEB-INF/img/logoRolandGarros.png"></h:graphicImage>
+					<h:commandLink class="navbar-brand"
+						action="#{connectionController.home}">
+						<h:graphicImage value="img/logoRolandGarros.png" height="30"
+							width="30"></h:graphicImage>
 					</h:commandLink>
 				</h:form>
 			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
+			<div id="navbar" class="navbar-collapse collapse">
 				<h:form class="nav navbar-nav">
-					<li><h:commandLink value="Ajouter Joueur" action="${connectionController.home}"></h:commandLink></li>
-					<li><h:commandLink value="Ajouter Joueur" action="${connectionController.ajoutJoueur}"></h:commandLink></li>
+					<li><h:commandLink value="Home"
+							action="#{connectionController.home}"></h:commandLink></li>
+					<li><h:commandLink value="Ajouter Joueur"
+							action="#{connectionController.ajoutJoueur}"></h:commandLink></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</h:form>
 			</div>
+			<!--/.nav-collapse -->
 		</div>
 	</nav>
 	<div class="container">
@@ -52,7 +62,7 @@
 						prénom, son sexe et sa nationalité.</p>
 				</div>
 			</div>
-			<div class="col-md-4">
+			<div class="col-md-4 lst">
 				<p>hello world</p>
 				<p>hello world</p>
 				<p>hello world</p>
@@ -81,7 +91,7 @@
 						<h:inputText id="nation" class="form-control"
 							value="#{ajoutJoueurController.nation}" placeholder="nation"></h:inputText>
 					</div>
-					<h:commandButton value="Enregistrer"
+					<h:commandButton class="btn btn-primary" value="Enregistrer"
 						action="#{ajoutJoueurController.traitementJoueur}"></h:commandButton>
 				</h:form>
 			</div>

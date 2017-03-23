@@ -1,0 +1,124 @@
+body{
+	font-family: 'Open Sans', sans-serif;
+}
+
+/*Jumbotron*/
+.jumbotron{
+
+	margin-top: 125px;
+	padding: auto;
+	background-color: #00503C;
+	border-radius: 5px;
+	color:white;
+}
+
+.table{
+	margin-top: 125px;
+}
+
+.lst{
+	margin-top:125px;
+}
+
+.logo{
+
+	float: left;
+}
+
+.msgDeco, .linkConnect{
+
+	text-align: center;
+	padding-top:20px;
+	padding-bottom:20px;
+}
+
+.linkConnect .glyphicon{
+	margin-right: 15px;
+}
+.jumbotron a {
+
+	color:white;
+	text-align: center;
+}
+
+.jumbotron a:hover {
+
+	color:#D35220;
+}
+
+.formConnexion{
+	
+	margin-top: 50px;
+}
+
+.btnConnexion{
+	
+	background-color:#D35220;
+	border-color:white;
+}
+/**Navbar**/
+.navbar{
+
+	background-color:white;
+	border-bottom: 1px solid #00503C;
+
+}
+
+.navbar .nav  li  a{
+     color: #D35220;
+     
+}
+
+.navbar .nav  li  a:hover{
+	color: #00503C;
+}
+.navbar .nameBrand{
+
+	color:  #D35220;
+}
+
+.navbar .nameBrand:hover{
+	color: #00503C;
+}
+
+/* Resultat */
+
+.affichageResult{
+
+	margin-top: 75px;
+	text-align: center;
+	color:#00503C;
+}
+
+.affichageResult label{
+
+	margin-top: 50px;
+}
+
+.listMatch{
+
+	margin-top: 50px;
+}
+
+.thumbnail {
+
+	height: 200px;
+	width:  200px;
+}
+
+.thumbnail h5{
+
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+
+
+}
+
+.caption{
+	font-weight: bold;
+}
+.caption .duree{
+
+	color:#D35220;
+	
+}

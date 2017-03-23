@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html"
-      xmlns:f="http://xmlns.jcp.org/jsf/core"
-      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
 <h:head>
 	<meta charset="utf-8" />
@@ -11,51 +11,72 @@
 	<meta name="description" content="" />
 	<meta name="author" content="" />
 	<title>Roland Garros</title>
-	
+
 	<!-- Bootstrap Core CSS -->
-	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" />
-	<script src ="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		rel="stylesheet" />
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	<link
+		href="css/cssCommun.css" rel="stylesheet" />
 </h:head>
 <h:body>
-	<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-		<div class="container-fluid">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
 			<div class="navbar-header">
-				<button type="button" class="navbar-toggle" data-toggle="collapse"
-					data-target="#myNavbar">
-					<span class="icon-bar"></span> <span class="icon-bar"></span> <span
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
 						class="icon-bar"></span>
 				</button>
 				<h:form>
-					<h:commandLink class="navbar-brand" action="#{connectionController.home}">
-						<h:graphicImage value="/WEB-INF/img/logoRolandGarros.png"></h:graphicImage>
+					<h:commandLink class="navbar-brand"
+						action="#{connectionController.home}">
+						<h:graphicImage value="img/logoRolandGarros.png" height="30"
+							width="30"></h:graphicImage>
 					</h:commandLink>
 				</h:form>
 			</div>
-			<div class="collapse navbar-collapse" id="myNavbar">
+			<div id="navbar" class="navbar-collapse collapse">
 				<h:form class="nav navbar-nav">
-					<li><h:commandLink value="Ajouter Joueur" action="#{connectionController.home}"></h:commandLink></li>
-					<li><h:commandLink value="Ajouter Joueur" action="#{connectionController.home}"></h:commandLink></li>
+					<li><h:commandLink value="Home"
+							action="#{connectionController.home}"></h:commandLink></li>
+					<li><h:commandLink value="Ajouter Joueur"
+							action="#{connectionController.ajoutJoueur}"></h:commandLink></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</h:form>
 			</div>
+			<!--/.nav-collapse -->
 		</div>
 	</nav>
 	<div class="container">
 		<div class="row">
-			<div class="jumbotron col-md-12 .text-center">
-				<h1>Connexion</h1>
-				<h:form>
+			<div class="jumbotron">
+				<img class="logo" src="img/logoRolandGarros.png" height="100"
+					width="100"/>
+				 <h1 class="msgDeco">Connexion</h1>
+				<div>
+					<h:form class="formConnexion">
 						<div class="form-group">
 							<h:outputLabel>PSEUDO</h:outputLabel>
-							<h:inputText id="nom" value="#{connectionController.pseudo}" class="form-control" placeholder="Saisir votre pseudo"></h:inputText>
+							<h:inputText id="nom" value="#{connectionController.pseudo}"
+								class="form-control" placeholder="Saisir votre pseudo"></h:inputText>
 						</div>
 						<div class="form-group">
 							<h:outputLabel>MOT DE PASSE</h:outputLabel>
-							<h:inputText id="password" value="#{connectionController.password}" class="form-control" placeholder="Saisir votre mot de passe"></h:inputText>
+							<h:inputText id="password"
+								value="#{connectionController.password}" class="form-control"
+								placeholder="Saisir votre mot de passe"></h:inputText>
 						</div>
-						<h:commandButton class="btn btn-primary" value="Connexion" action="#{connectionController.traitementConnection}"></h:commandButton>
-				</h:form>
+						<h:commandButton class="btn btn-primary btnConnexion" value="Connexion"
+							action="#{connectionController.traitementConnection}"></h:commandButton>
+					</h:form>
+				</div>
 			</div>
 		</div>
 	</div>
