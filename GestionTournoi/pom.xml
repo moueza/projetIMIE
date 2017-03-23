@@ -7,6 +7,10 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>GestionTournoi Maven Webapp</name>
 	<url>http://maven.apache.org</url>
+	<properties>
+		<java-version>1.7</java-version>
+		<org.springframework-version>4.3.0.RELEASE</org.springframework-version>
+	</properties>
 
 	<dependencies>
 
@@ -52,38 +56,6 @@
 			<version>1</version>
 		</dependency>
 
-		<!-- ******** Spring ******** -->
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-core</artifactId>
-			<version>4.3.5.RELEASE</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-context</artifactId>
-			<version>4.3.5.RELEASE</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.springframework</groupId>
-			<artifactId>spring-aop</artifactId>
-			<version>4.3.5.RELEASE</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjrt</artifactId>
-			<version>1.6.11</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.aspectj</groupId>
-			<artifactId>aspectjweaver</artifactId>
-			<version>1.6.11</version>
-		</dependency>
-		<!-- ******** fin Spring ******** -->
-
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
@@ -114,7 +86,7 @@
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>2.3.2</version>
+				<version>3.0</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
