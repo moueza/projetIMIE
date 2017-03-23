@@ -34,7 +34,7 @@ public class GestionJoueurImpl implements GestionJoueur {
 					Joueur joueur = new Joueur(nom, prenom, sexe, nation);
 					
 					GestionJoueurDao joueurDao = GestionJoueurDaoImpl.getInstance();
-					joueurDao.ajoutJoueurBdd(joueur);
+					joueurDao.ajoutJoueurDao(joueur);
 					return "joueur enregistre";
 				}
 			}

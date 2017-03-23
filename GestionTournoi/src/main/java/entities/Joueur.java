@@ -15,7 +15,12 @@ import javax.persistence.Table;
  */
 @Entity
 @Table(name = "joueur")
-public class Joueur extends Opposant{
+public class Joueur{
+	
+	@Id
+	@Column(name = "idjoueur", nullable = false, unique = true)
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	public Integer idjoueur;
 	
 	/**
 	 * Instance de {@link String} correspondant au nom d'un joueur.
