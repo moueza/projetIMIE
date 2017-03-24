@@ -19,10 +19,13 @@ public class AjoutJoueurController {
 		
 	}
 	
+	public String affichagePage(){
+		
+		return "player";
+	}
 	public String traitementJoueur(){
-		
-		
-		return "/WEB-INF/player";
+		System.out.println("hello world");
+		return "ressources/player";
 	}
 
 	public String getNomJoueur() {

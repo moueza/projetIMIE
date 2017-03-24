@@ -14,18 +14,8 @@ public class ConnectionController implements Serializable {
 	private String password;
 
 	public String traitementConnection() {
-
-		return "/WEB-INF/player";
-	}
-
-	public String home() {
-
-		return "connection";
-	}
-
-	public String ajoutJoueur() {
-
-		return "/WEB-INF/player";
+		
+		return "ressources/home";
 	}
 
 	public String getPseudo() {
