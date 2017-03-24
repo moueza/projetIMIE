@@ -1,12 +1,140 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html">
-<head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
-</head>
-<body>
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>Roland Garros</title>
 
-</body>
+	<!-- Bootstrap Core CSS -->
+	<link
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		rel="stylesheet" />
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link href="../css/cssCommun.css" rel="stylesheet" />
+</h:head>
+<h:body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<h:form>
+					<a class="navbar-brand" href="home.xhtml">
+						<h:graphicImage value="../img/logoRolandGarros.png" height="30"
+							width="30"></h:graphicImage>
+					</a>
+				</h:form>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<h:form class="nav navbar-nav">
+					<li><a href="home.xhtml">Menu General</a></li>
+				</h:form>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="jumbotron">
+				<img class="logo" src="../img/logoRolandGarros.png" height="100"
+					width="100" />
+				<h1 class="msgDeco">MENU GENERAL</h1>
+			</div>
+			<div class="listMatchcol-md-12">
+				<div class="row">
+					<div class="col-md-4">
+						<div class="thumbnail img-responsive thumbnailMenuGeneral">
+							<h:form>
+								<h:commandLink value="" action="#{homeController.affichagePageAjoutJoueur}">
+									<img src="../img/nadal.jpg" alt="..." />
+								</h:commandLink>
+							</h:form>
+
+						</div>
+						<h:form>
+							<h:commandLink value="Enregistrer des joueurs" action="#{homeController.affichagePageAjoutJoueur}"></h:commandLink>
+						</h:form>
+					</div>
+					<div class="col-sm-12 col-md-4">
+						<div class="thumbnail img-responsive thumbnailMenuGeneral">
+							<h:form>
+								<h:commandLink value="" action="#{homeController.affichagePageEnregistrerArbitre}">
+									<img src="../img/arbitre.jpg" alt="..." />
+								</h:commandLink>
+							</h:form>
+
+						</div>
+						<h:form>
+							<h:commandLink value="Enregistrer des arbitres" action="#{homeController.affichagePageEnregistrerArbitre}"></h:commandLink>
+						</h:form>
+					</div>
+					<div class="col-sm-12 col-md-4">
+						<div class="thumbnail img-responsive thumbnailMenuGeneral">
+							<h:form>
+								<h:commandLink value="" action="#{homeController.affichagePageEnregistrerCourt}">
+									<img src="../img/rolandGarros.jpg" alt="..." />
+								</h:commandLink>
+							</h:form>
+
+						</div>
+						<h:form>
+							<h:commandLink value="Enregistrer des Courts" action="#{homeController.affichagePageEnregistrerCourt}"></h:commandLink>
+						</h:form>
+					</div>
+					<div class="col-sm-12 col-md-4">
+						<div class="thumbnail img-responsive thumbnailMenuGeneral">
+							<h:form>
+								<h:commandLink value="" action="#{homeController.affichagePagePlanifierMatch}">
+									<img src="../img/planning.jpg" alt="..." />
+								</h:commandLink>
+							</h:form>
+							
+						</div>
+						<h:form>
+							<h:commandLink value="Planifier des matchs" action="#{homeController.affichagePagePlanifierMatch}"></h:commandLink>
+						</h:form>
+					</div>
+					<div class="col-sm-12 col-md-4">
+						<div class="thumbnail img-responsive thumbnailMenuGeneral">
+							<h:form>
+								<h:commandLink value="" action="#{homeController.affichagePageEnregisterResultat}">
+									<img src="../img/nadal.jpg" alt="..." />
+								</h:commandLink>
+							</h:form>
+							
+						</div>
+						<h:form>
+							<h:commandLink value="Enregistrer des résulats de matchs" action="#{homeController.affichagePageEnregisterResultat}"></h:commandLink>
+						</h:form>
+					</div>
+					<div class="col-sm-12 col-md-4">
+						<div class="thumbnail img-responsive thumbnailMenuGeneral">
+							<h:form>
+								<h:commandLink value="" action="#{homeController.deconnexion}" >
+									<img src="../img/logout.png" alt="..." />
+								</h:commandLink>
+							</h:form>
+							
+						</div>
+						<h:form>
+							<h:commandLink value="Déconnexion du site" action="#{homeController.deconnexion}"></h:commandLink>
+						</h:form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</h:body>
 </html>

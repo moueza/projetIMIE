@@ -5,11 +5,11 @@
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
 <h:head>
-	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta name="description" content="" />
-	<meta name="author" content="" />
+	<meta charset="utf-8"></meta>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+	<meta name="description" content=""></meta>
+	<meta name="author" content=""></meta>
 	<title>Roland Garros</title>
 
 	<!-- Bootstrap Core CSS -->
@@ -18,63 +18,31 @@
 		rel="stylesheet" />
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-	
-	<link
-		href="css/cssCommun.css" rel="stylesheet" />
+
+	<link href="css/cssCommun.css" rel="stylesheet" />
 </h:head>
 <h:body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-					aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<h:form>
-					<h:commandLink class="navbar-brand"
-						action="#{connectionController.home}">
-						<h:graphicImage value="img/logoRolandGarros.png" height="30"
-							width="30"></h:graphicImage>
-					</h:commandLink>
-				</h:form>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<h:form class="nav navbar-nav">
-					<li><h:commandLink value="Home"
-							action="#{connectionController.home}"></h:commandLink></li>
-					<li><h:commandLink value="Ajouter Joueur"
-							action="#{connectionController.ajoutJoueur}"></h:commandLink></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
-				</h:form>
-			</div>
-			<!--/.nav-collapse -->
-		</div>
-	</nav>
 	<div class="container">
 		<div class="row">
 			<div class="jumbotron">
 				<img class="logo" src="img/logoRolandGarros.png" height="100"
-					width="100"/>
-				 <h1 class="msgDeco">Connexion</h1>
+					width="100" />
+				<h1 class="msgDeco">Connexion</h1>
 				<div>
 					<h:form class="formConnexion">
 						<div class="form-group">
 							<h:outputLabel>PSEUDO</h:outputLabel>
-							<h:inputText id="nom" value="#{connectionController.pseudo}"
+							<h:inputText id="nom"
 								class="form-control" placeholder="Saisir votre pseudo"></h:inputText>
 						</div>
 						<div class="form-group">
 							<h:outputLabel>MOT DE PASSE</h:outputLabel>
 							<h:inputText id="password"
-								value="#{connectionController.password}" class="form-control"
+								 class="form-control"
 								placeholder="Saisir votre mot de passe"></h:inputText>
 						</div>
-						<h:commandButton class="btn btn-primary btnConnexion" value="Connexion"
-							action="#{connectionController.traitementConnection}"></h:commandButton>
+						<h:commandButton class="btn btn-primary btnConnexion"
+							value="Connexion" action="#{connectionController.traitementConnection}"></h:commandButton>
 					</h:form>
 				</div>
 			</div>

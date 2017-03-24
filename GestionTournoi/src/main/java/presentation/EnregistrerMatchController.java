@@ -11,8 +11,5 @@ public class EnregistrerMatchController {
 		
 	}
 	
-	public String affichagePage(){
-		
-		return "/WEB-INF/results";
-	}
+	
 }
