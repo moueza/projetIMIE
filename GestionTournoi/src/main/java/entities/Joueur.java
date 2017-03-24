@@ -45,7 +45,6 @@ public class Joueur{
 	 */
 	public Nation nation;
 	
-	
 	/**
 	 * Constructeur à vide de Joueur
 	 */
