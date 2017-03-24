@@ -1,0 +1,29 @@
+<!--https://docs.jboss.org/hibernate/stable/annotations/reference/en/html_single/ -->
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!-- property name="hibernate.archive.autodetection" value="class, hbm" 
+			/> -->
+
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<!-- 3306/hibernatedemo -->
+		<property name="hibernate.connection.url">jdbc:mysql://localhost:3306/projetimie</property>
+		<property name="hibernate.connection.password">root</property>
+		<property name="hibernate.connection.username">root</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+		<property name="show_sql">true</property>
+		<property name="hbm2ddl.auto">update</property>
+
+		<!-- mapping package="entities.Nation" / -->
+		<mapping class="entities.Nation" />
+		<mapping class="entities.Joueur" />
+
+		<!-- mapping class="entities.Sexe" / -->
+		<!-- mapping class="entities.Joueur" / -->
+
+		<mapping resource="hibernate.cfg.xml" />
+		<!-- mapping resource="test/animals/orm.xml" -->
+	</session-factory>
+</hibernate-configuration>
