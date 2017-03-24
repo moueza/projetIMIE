@@ -1,5 +1,6 @@
 package entities;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -42,12 +43,16 @@ public class Arbitre {
 	 */
 	@Column(name = "niveau", length = 50)
 	public String niveau;
+	
+	@ManyToOne(cascade = CascadeType.ALL)
+	public Nation nation;
 
-	public Arbitre(String nom, String prenom, String niveau) {
+	public Arbitre(String nom, String prenom, String niveau, Nation nation) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
 		this.niveau = niveau;
+		this.nation = nation;
 	}
 
 	public Integer getIdarbitre() {
@@ -81,7 +86,13 @@ public class Arbitre {
 	public void setNiveau(String niveau) {
 		this.niveau = niveau;
 	}
-	
-	
+
+	public Nation getNation() {
+		return nation;
+	}
+
+	public void setNation(Nation nation) {
+		this.nation = nation;
+	}
 
 }

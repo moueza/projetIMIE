@@ -40,7 +40,7 @@ public class Joueur {
 	 * Instance de {@link enum.Sexe} correspondant au genre d'un joueur.
 	 */
 	@Column(name = "sexe", length = 50)
-	public Sexe sexe;
+	public String sexe;
 
 	/**
 	 * Instance de {@link Nation} correspondant à la nationnalité d'un joueur.
@@ -67,7 +67,7 @@ public class Joueur {
 	 * @param nation
 	 *            nationnalité
 	 */
-	public Joueur(String nom, String prenom, Sexe sexe, Nation nation) {
+	public Joueur(String nom, String prenom, String sexe, Nation nation) {
 		super();
 		this.nom = nom;
 		this.prenom = prenom;
@@ -94,7 +94,7 @@ public class Joueur {
 	/**
 	 * @return Retourne le genre du joueur (HOMME / FEMME)
 	 */
-	public Sexe getSexe() {
+	public String getSexe() {
 		return sexe;
 	}
 
@@ -102,7 +102,7 @@ public class Joueur {
 	 * @param sexe
 	 *            Redéfinit le genre du joueur (HOMME / FEMME)
 	 */
-	public void setSexe(Sexe sexe) {
+	public void setSexe(String sexe) {
 		this.sexe = sexe;
 	}
 

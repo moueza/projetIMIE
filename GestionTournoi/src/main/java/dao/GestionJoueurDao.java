@@ -1,7 +1,5 @@
 package dao;
 
-import java.util.List;
-
 import entities.Joueur;
 
 public interface GestionJoueurDao {
@@ -14,10 +12,4 @@ public interface GestionJoueurDao {
 	 */
 	public void ajoutJoueurDao(Joueur joueur);
 
-	/**
-	 * Permet de récupérer la liste des joueurs présents dans la bdd
-	 * 
-	 * @return List<Joueur>
-	 */
-	public List<Joueur> getListJoueur();
 }

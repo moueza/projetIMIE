@@ -31,7 +31,7 @@ public class GestionJoueurImpl implements GestionJoueur {
 		if (isboolVerifierNonNull(nom, prenom)) {
 			if(isboolVerifierChampsNonVide(nom, prenom)){
 				if(isboolVerifierPasDeCaractereSpe(nom, prenom)){
-					Joueur joueur = new Joueur(nom, prenom, sexe, nation);
+					Joueur joueur = new Joueur(nom, prenom, sexe.toString(), nation);
 					
 					GestionJoueurDao joueurDao = GestionJoueurDaoImpl.getInstance();
 					joueurDao.ajoutJoueurDao(joueur);
@@ -110,6 +110,6 @@ public class GestionJoueurImpl implements GestionJoueur {
 		List<Joueur> listJoueur = new ArrayList<Joueur>();
 		GestionJoueurDao joueurDao = GestionJoueurDaoImpl.getInstance();
 		
-		return joueurDao.getListJoueur();
+		return listJoueur;
 	}
 }
