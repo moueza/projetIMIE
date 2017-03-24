@@ -20,6 +20,8 @@ public class MatchTennis {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	public Integer idmatch;
 	
+	
+	
 	@ManyToOne
 	public Integer idcourt;
 	
