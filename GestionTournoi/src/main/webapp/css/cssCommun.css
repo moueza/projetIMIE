@@ -5,7 +5,7 @@ body{
 /*Jumbotron*/
 .jumbotron{
 
-	margin-top: 125px;
+	margin-top:125px;
 	padding: auto;
 	background-color: #00503C;
 	border-radius: 5px;
@@ -117,3 +117,11 @@ body{
 	color:#D35220;
 	
 }
+/* liste coté */
+
+.entete{
+	
+	background-color:#00503C;
+	color:white;
+}
+

@@ -18,6 +18,7 @@
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
 	<link href="../css/cssCommun.css" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"/> 
 </h:head>
 <h:body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -31,7 +32,7 @@
 						class="icon-bar"></span>
 				</button>
 				<a href="home.xhtml"> <h:graphicImage
-						value="../img/logoRolandGarros.png" height="30" width="30"></h:graphicImage>
+						value="../img/logoRolandGarros.png" height="40" width="40"></h:graphicImage>
 				</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
@@ -54,79 +55,90 @@
 					<div class="col-md-4">
 						<div class="thumbnail img-responsive thumbnailMenuGeneral">
 							<h:form>
-								<h:commandLink value="" action="#{homeController.affichagePageAjoutJoueur}">
+								<h:commandLink value=""
+									action="#{homeController.affichagePageAjoutJoueur}">
 									<img src="../img/nadal.jpg" alt="..." />
 								</h:commandLink>
 							</h:form>
 
 						</div>
 						<h:form>
-							<h:commandLink value="Enregistrer des joueurs" action="#{homeController.affichagePageAjoutJoueur}"></h:commandLink>
+							<h:commandLink value="Enregistrer des joueurs"
+								action="#{homeController.affichagePageAjoutJoueur}"></h:commandLink>
 						</h:form>
 					</div>
 					<div class="col-md-4">
 						<div class="thumbnail img-responsive thumbnailMenuGeneral">
 							<h:form>
-								<h:commandLink value="" action="#{homeController.affichagePageEnregistrerArbitre}">
+								<h:commandLink value=""
+									action="#{homeController.affichagePageEnregistrerArbitre}">
 									<img src="../img/arbitre.jpg" alt="..." />
 								</h:commandLink>
 							</h:form>
 
 						</div>
 						<h:form>
-							<h:commandLink value="Enregistrer des arbitres" action="#{homeController.affichagePageEnregistrerArbitre}"></h:commandLink>
+							<h:commandLink value="Enregistrer des arbitres"
+								action="#{homeController.affichagePageEnregistrerArbitre}"></h:commandLink>
 						</h:form>
 					</div>
 					<div class="col-md-4">
 						<div class="thumbnail img-responsive thumbnailMenuGeneral">
 							<h:form>
-								<h:commandLink value="" action="#{homeController.affichagePageEnregistrerCourt}">
+								<h:commandLink value=""
+									action="#{homeController.affichagePageEnregistrerCourt}">
 									<img src="../img/rolandGarros.jpg" alt="..." />
 								</h:commandLink>
 							</h:form>
 
 						</div>
 						<h:form>
-							<h:commandLink value="Enregistrer des Courts" action="#{homeController.affichagePageEnregistrerCourt}"></h:commandLink>
+							<h:commandLink value="Enregistrer des Courts"
+								action="#{homeController.affichagePageEnregistrerCourt}"></h:commandLink>
 						</h:form>
 					</div>
 					<div class="col-md-4">
 						<div class="thumbnail img-responsive thumbnailMenuGeneral">
 							<h:form>
-								<h:commandLink value="" action="#{homeController.affichagePagePlanifierMatch}">
+								<h:commandLink value=""
+									action="#{homeController.affichagePagePlanifierMatch}">
 									<img src="../img/planning.jpg" alt="..." />
 								</h:commandLink>
 							</h:form>
-							
+
 						</div>
 						<h:form>
-							<h:commandLink value="Planifier des matchs" action="#{homeController.affichagePagePlanifierMatch}"></h:commandLink>
+							<h:commandLink value="Planifier des matchs"
+								action="#{homeController.affichagePagePlanifierMatch}"></h:commandLink>
 						</h:form>
 					</div>
 					<div class="col-md-4">
 						<div class="thumbnail img-responsive thumbnailMenuGeneral">
 							<h:form>
-								<h:commandLink value="" action="#{homeController.affichagePageEnregisterResultat}">
-									<img src="../img/nadal.jpg" alt="..." />
+								<h:commandLink value=""
+									action="#{homeController.affichagePageEnregisterResultat}">
+									<img src="../img/scoreboard.jpg" alt="..." />
 								</h:commandLink>
 							</h:form>
-							
+
 						</div>
 						<h:form>
-							<h:commandLink value="Enregistrer des résulats de matchs" action="#{homeController.affichagePageEnregisterResultat}"></h:commandLink>
+							<h:commandLink value="Enregistrer des résulats de matchs"
+								action="#{homeController.affichagePageEnregisterResultat}"></h:commandLink>
 						</h:form>
 					</div>
 					<div class="col-md-4">
 						<div class="thumbnail img-responsive thumbnailMenuGeneral">
 							<h:form>
-								<h:commandLink value="" action="#{homeController.deconnexion}" >
+								<h:commandLink value="" action="#{homeController.deconnexion}">
 									<img src="../img/logout.png" alt="..." />
 								</h:commandLink>
 							</h:form>
-							
+
 						</div>
 						<h:form>
-							<h:commandLink value="Déconnexion du site" action="#{homeController.deconnexion}"></h:commandLink>
+							<h:commandLink value="Déconnexion du site"
+								action="#{homeController.deconnexion}"></h:commandLink>
 						</h:form>
 					</div>
 				</div>
