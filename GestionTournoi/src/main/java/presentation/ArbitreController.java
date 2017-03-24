@@ -5,29 +5,19 @@ import javax.faces.bean.SessionScoped;
 
 @ManagedBean
 @SessionScoped
-public class AjoutArbitreController {
-	
+public class ArbitreController {
+
 	private String nom;
 	private String prenom;
 	private String niveau;
 	private String nation;
-	
-	public AjoutArbitreController(){
-		
+
+	public ArbitreController() {
+
 	}
-	
-	public String affichagePage(){
-		
-		return "/WEB-INF/arbitre";
-	}
-	
-	public String traitementArbitre(){
-		
-		return "arbitre";
-	}
-	
-	public String arbitre(){
-		
+
+	public String traitementArbitre() {
+
 		return "arbitre";
 	}
 
@@ -62,6 +52,5 @@ public class AjoutArbitreController {
 	public void setPrenom(String prenom) {
 		this.prenom = prenom;
 	}
-	
-	
+
 }
