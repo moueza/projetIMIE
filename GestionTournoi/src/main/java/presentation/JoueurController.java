@@ -7,7 +7,7 @@ import javax.faces.bean.SessionScoped;
 import entities.Sexe;
 @ManagedBean
 @SessionScoped
-public class AjoutJoueurController {
+public class JoueurController {
 
 	private String nomJoueur;
 	private String prenom;
@@ -15,7 +15,7 @@ public class AjoutJoueurController {
 	private String nation;
 	
 	
-	public AjoutJoueurController(){
+	public JoueurController(){
 		
 	}
 	

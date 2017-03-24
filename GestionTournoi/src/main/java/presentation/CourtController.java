@@ -5,14 +5,27 @@ import javax.faces.bean.SessionScoped;
 
 @ManagedBean
 @SessionScoped
-public class AjoutCourtController {
+public class CourtController {
 	
-	public AjoutCourtController(){
+	private String court ; 
+	
+	public CourtController(){
 		
 	}
 	
-	public String affichagePage(){
+	public String traitementCourt(){
 		
-		return "/WEB-INF/court";
+		return "court";
 	}
+
+	public String getCourt() {
+		return court;
+	}
+
+	public void setCourt(String court) {
+		this.court = court;
+	}
+	
+	
+	
 }

@@ -1,19 +1,80 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:f="http://java.sun.com/jsf/core"
-      xmlns:h="http://java.sun.com/jsf/html">
-<head>
-  <title>Enregistrer court</title>
-  <meta charset="utf-8"></meta>
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1"></meta>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"></link>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" type="text/css" href="style/site bootstrap.css"></link>
-  <link rel="stylesheet" type="text/css" href="cssCommun.css"></link>
-</head>
-<body>
-	<p> hello world</p>
-</body> 
+<h:head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="description" content="" />
+	<meta name="author" content="" />
+	<title>Roland Garros</title>
+
+	<!-- Bootstrap Core CSS -->
+	<link
+		href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		rel="stylesheet" />
+	<script
+		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+	<link href="css/cssCommun.css" rel="stylesheet" />
+</h:head>
+<h:body>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
+					aria-controls="navbar">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<h:form>
+					<h:commandLink class="navbar-brand"
+						action="#{connectionController.home}">
+						<h:graphicImage value="../img/logoRolandGarros.png" height="30"
+							width="30"></h:graphicImage>
+					</h:commandLink>
+				</h:form>
+			</div>
+			<div id="navbar" class="navbar-collapse collapse">
+				<h:form class="nav navbar-nav">
+					<li><a href="home.xhtml">Menu General</a></li>
+				</h:form>
+			</div>
+			<!--/.nav-collapse -->
+		</div>
+	</nav>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8">
+				<div class="jumbotron">
+					<h1>Enregistrer des courts</h1>
+					<p>Enregistrer un nouveau court en indiquant son nom</p>
+				</div>
+			</div>
+			<div class="col-md-4 lst">
+				<p>hello world</p>
+				<p>hello world</p>
+				<p>hello world</p>
+				<p>hello world</p>
+				<p>hello world</p>
+			</div>
+			<div class="col-md-12">
+				<h:form>
+					<div class="form-group">
+						<h:outputLabel>Nom</h:outputLabel>
+						<h:inputText id="nom" class="form-control"
+							value="#{courtController.court}" placeholder="Nom"></h:inputText>
+					</div>
+					<h:commandButton class="btn btn-primary" value="Enregistrer"
+						action="#{courtController.traitementJoueur}"></h:commandButton>
+				</h:form>
+			</div>
+		</div>
+	</div>
+</h:body>
+
 </html>

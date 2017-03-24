@@ -5,9 +5,9 @@ import javax.faces.bean.SessionScoped;
 
 @ManagedBean
 @SessionScoped
-public class AjoutMatchController {
+public class PlanningMatchController {
 	
-	public AjoutMatchController(){
+	public PlanningMatchController(){
 		
 	}
 	
