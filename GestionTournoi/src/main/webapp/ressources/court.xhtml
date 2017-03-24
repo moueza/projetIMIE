@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html">
-
 <h:head>
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -18,7 +17,7 @@
 	<script
 		src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-	<link href="css/cssCommun.css" rel="stylesheet" />
+	<link href="../css/cssCommun.css" rel="stylesheet" />
 </h:head>
 <h:body>
 	<nav class="navbar navbar-default navbar-fixed-top">
@@ -32,11 +31,10 @@
 						class="icon-bar"></span>
 				</button>
 				<h:form>
-					<h:commandLink class="navbar-brand"
-						action="#{connectionController.home}">
+					<a class="navbar-brand" href="home.xhtml">
 						<h:graphicImage value="../img/logoRolandGarros.png" height="30"
 							width="30"></h:graphicImage>
-					</h:commandLink>
+					</a>
 				</h:form>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
