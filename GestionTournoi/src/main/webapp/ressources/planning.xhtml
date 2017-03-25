@@ -2,8 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-	xmlns:p="http://primefaces.prime.com.tr/ui">
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
 
 <h:head>
 	<meta charset="utf-8" />
@@ -23,28 +22,7 @@
 	<link href="../css/cssCommun.css" rel="stylesheet" />
 </h:head>
 <h:body>
-	<nav class="navbar navbar-default navbar-fixed-top">
-		<div class="container">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#navbar" aria-expanded="false"
-					aria-controls="navbar">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a href="home.xhtml"> <h:graphicImage
-						value="../img/logoRolandGarros.png" height="40" width="40"></h:graphicImage>
-				</a>
-			</div>
-			<div id="navbar" class="navbar-collapse collapse">
-				<h:form class="nav navbar-nav">
-					<li><a href="home.xhtml">Menu General</a></li>
-				</h:form>
-			</div>
-			<!--/.nav-collapse -->
-		</div>
-	</nav>
+	<ui:include src="nav.xhtml"></ui:include>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
@@ -103,10 +81,6 @@
 					</div>
 					<div class="form-group">
 						<h:outputLabel>Date</h:outputLabel>
-						<p:outputLabel for="inline" value="Inline:" />
-						<p:panelGrid columns="1">
-							<p:calendar value="#{backingBean.date}" />
-						</p:panelGrid>
 					</div>
 					<h:commandButton class="btn btn-primary btnConnexion"
 						value="Enregistrer"
