@@ -6,38 +6,44 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean
 @SessionScoped
 public class HomeController {
-	
-	public HomeController(){
-		
+
+	public HomeController() {
+
 	}
-	
-	public String affichagePageAjoutJoueur(){
-		
+
+	public String affichagePageAjoutJoueur() {
+
 		return "player";
 	}
-	
-	public String affichagePageEnregistrerArbitre(){
-		
+
+	public String affichagePageEnregistrerArbitre() {
+
 		return "arbitre";
 	}
-	
-	public String affichagePageEnregistrerCourt(){
-		
+
+	public String affichagePageEnregistrerCourt() {
+
 		return "court";
 	}
-	
-	public String affichagePagePlanifierMatch(){
-		
+
+	public String affichagePagePlanifierMatch() {
+
 		return "planning";
 	}
-	
-	public String affichagePageEnregisterResultat(){
-		
+
+	public String affichagePageEnregisterResultat() {
+
 		return "results";
 	}
-	
-	public String deconnexion(){
+
+	public String deconnexion() {
+
+		return "/WEB-INF/deconnection";
+	}
+
+	public String deco() {
 		
-		return "deconnexion";
+		System.out.print("hello");
+		return "/ressources/home";
 	}
 }

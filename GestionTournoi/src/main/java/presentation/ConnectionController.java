@@ -17,6 +17,8 @@ public class ConnectionController implements Serializable {
 		System.out.println("hello world");
 		return "ressources/home";
 	}
+	
+	
 
 	public String getPseudo() {
 		return pseudo;
