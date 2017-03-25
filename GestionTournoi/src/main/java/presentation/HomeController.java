@@ -38,12 +38,8 @@ public class HomeController {
 
 	public String deconnexion() {
 
-		return "/WEB-INF/deconnection";
+		return "deconnection";
 	}
 
-	public String deco() {
-		
-		System.out.print("hello");
-		return "/ressources/home";
-	}
+	
 }

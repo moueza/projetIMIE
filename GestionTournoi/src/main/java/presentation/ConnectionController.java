@@ -14,7 +14,6 @@ public class ConnectionController implements Serializable {
 	private String password;
 
 	public String traitementConnection() {
-		System.out.println("hello world");
 		return "ressources/home";
 	}
 	
