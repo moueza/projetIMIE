@@ -75,6 +75,26 @@ public class Joueur {
 		this.nation = nation;
 	}
 
+	/**
+	 * Constructeur de Joueur
+	 * 
+	 * @param nom
+	 *            nom
+	 * @param prenom
+	 *            prénom
+	 * @param sexe
+	 *            genre (HOMME / FEMME)
+	 * @param nation
+	 *            nationnalité
+	 */
+	public Joueur(String nom, String prenom, Sexe sexe, Nation nation) {
+		super();
+		this.nom = nom;
+		this.prenom = prenom;
+		this.sexe = sexe.toString();
+		this.nation = nation;
+	}
+	
 	public String getNom() {
 		return nom;
 	}
