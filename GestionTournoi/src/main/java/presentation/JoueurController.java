@@ -1,10 +1,9 @@
 package presentation;
 
-import java.util.List;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import entities.Sexe;
+
 @ManagedBean
 @SessionScoped
 public class JoueurController {
