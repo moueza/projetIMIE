@@ -18,11 +18,10 @@ public class GestionJoueurDaoImpl implements GestionJoueurDao {
 		return INSTANCE;
 	}	
 	
+	
 	public void ajoutJoueurDao(Joueur joueur) {
-    //Hibernate API to save this objects to DB
-    //Session factory is created only ONCE
-    SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
-    Session session = sessionFactory.openSession();
+SessionFactory sessionFactory = new Configuration().configure().buildSessionFactory();
+		Session session = sessionFactory.openSession();
 
     //create transaction
     session.beginTransaction();
