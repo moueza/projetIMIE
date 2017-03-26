@@ -2,6 +2,9 @@ package presentation;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
+
+import org.omg.CORBA.Request;
+
 import java.io.Serializable;
 
 @ManagedBean
@@ -12,8 +15,13 @@ public class ConnectionController implements Serializable {
 
 	private String pseudo;
 	private String password;
-
+	
+	public ConnectionController(){
+		
+	}
+	
 	public String traitementConnection() {
+		
 		return "ressources/home";
 	}
 	

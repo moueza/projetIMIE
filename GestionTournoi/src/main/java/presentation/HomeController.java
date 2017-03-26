@@ -6,13 +6,20 @@ import javax.faces.bean.SessionScoped;
 @ManagedBean
 @SessionScoped
 public class HomeController {
-
+	
+	private String title;
+	private String description;
+	
 	public HomeController() {
 
 	}
 
 	public String affichagePageAjoutJoueur() {
-
+		
+		title = "Enregistrement d'un nouveau joueur";
+		description = "Enregistrer un nouveau joueur en indiquant son nom, son prénom," + 
+		"son sexe et sa nationalité.";
+		
 		return "player";
 	}
 
@@ -41,5 +48,22 @@ public class HomeController {
 		return "deconnection";
 	}
 
+	public String getTitle() {
+		return title;
+	}
+
+	public void setTitle(String title) {
+		this.title = title;
+	}
+
+	public String getDescription() {
+		return description;
+	}
+
+	public void setDescription(String description) {
+		this.description = description;
+	}
+	
+	
 	
 }

@@ -9,7 +9,7 @@ import entities.Sexe;
 @SessionScoped
 public class JoueurController {
 
-	private String nomJoueur;
+	private String nom;
 	private String prenom;
 	private String sexe;
 	private String nation;
@@ -28,12 +28,12 @@ public class JoueurController {
 		return "ressources/player";
 	}
 
-	public String getNomJoueur() {
-		return nomJoueur;
+	public String getNom() {
+		return nom;
 	}
 
-	public void setNomJoueur(String nomJoueur) {
-		this.nomJoueur = nomJoueur;
+	public void setNom(String nom) {
+		this.nom = nom;
 	}
 
 	public String getPrenom() {

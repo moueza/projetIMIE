@@ -25,11 +25,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8">
-				<div class="jumbotron">
-					<h1>Enregistrement d'un nouveau joueur</h1>
-					<p>Enregistrer un nouveau joueur en indiquant son nom, son
-						prénom, son sexe et sa nationalité.</p>
-				</div>
+				<ui:include src="jumbotron.xhtml"></ui:include>
 			</div>
 			<div class="col-md-4">
 				<table class="table table-bordered">
@@ -53,25 +49,25 @@
 					<div class="form-group">
 						<h:outputLabel>Nom</h:outputLabel>
 						<h:inputText id="nom" class="form-control"
-							value="#{JoueurController.nomJoueur}" placeholder="Nom"></h:inputText>
+							value="#{joueurController.nom}" placeholder="Nom"></h:inputText>
 					</div>
 					<div class="form-group">
 						<h:outputLabel>Prenom</h:outputLabel>
 						<h:inputText id="prenom" class="form-control"
-							value="#{JoueurController.prenom}" placeholder="Prenom"></h:inputText>
+							value="#{joueurController.prenom}" placeholder="Prenom"></h:inputText>
 					</div>
 					<div class="form-group">
 						<h:outputLabel>Sexe</h:outputLabel>
 						<h:inputText id="sexe" class="form-control"
-							value="#{JoueurController.sexe}" placeholder="Sexe"></h:inputText>
+							value="#{joueurController.sexe}" placeholder="Sexe"></h:inputText>
 					</div>
 					<div class="form-group">
 						<h:outputLabel>Sexe</h:outputLabel>
 						<h:inputText id="nation" class="form-control"
-							value="#{JoueurController.nation}" placeholder="nation"></h:inputText>
+							value="#{joueurController.nation}" placeholder="nation"></h:inputText>
 					</div>
 					<h:commandButton class="btn btn-primary" value="Enregistrer"
-						action="#{JoueurController.traitementJoueur}"></h:commandButton>
+						action="#{joueurController.traitementJoueur}"></h:commandButton>
 				</h:form>
 			</div>
 		</div>
