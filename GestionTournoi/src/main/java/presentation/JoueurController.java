@@ -23,8 +23,10 @@ public class JoueurController {
 		
 		return "player";
 	}
+	
+	
 	public String traitementJoueur(){
-		System.out.println("hello world");
+		
 		return "ressources/player";
 	}
 

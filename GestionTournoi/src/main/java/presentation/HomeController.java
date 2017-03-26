@@ -24,17 +24,28 @@ public class HomeController {
 	}
 
 	public String affichagePageEnregistrerArbitre() {
+		
+		title = "Enregistrement des arbitres";
+		description = "Enregistrer un nouvel arbitre en indiquant son nom,son"
+						+"prénom, sa nationalité et son niveau(chaise ou ligne).";
 
 		return "arbitre";
 	}
 
 	public String affichagePageEnregistrerCourt() {
-
+		
+		title = "Enregistrer des courts";
+		description = "Enregistrer un nouveau court en indiquant son nom";
+		
 		return "court";
 	}
 
 	public String affichagePagePlanifierMatch() {
-
+		
+		title = "Planifier des matchs";
+		description = "Pour créer un match, sélectionne deux joueurs, un arbitre,"
+						+ "un court et une date";
+		
 		return "planning";
 	}
 

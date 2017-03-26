@@ -25,7 +25,6 @@ public class ConnectionController implements Serializable {
 		return "ressources/home";
 	}
 	
-	
 
 	public String getPseudo() {
 		return pseudo;
