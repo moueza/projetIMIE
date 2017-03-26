@@ -2,9 +2,6 @@ package presentation;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-
-import org.omg.CORBA.Request;
-
 import java.io.Serializable;
 
 @ManagedBean

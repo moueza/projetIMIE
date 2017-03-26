@@ -1,0 +1,21 @@
+<ui:composition 
+xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+xmlns:c="http://java.sun.com/jsp/jstl/core"
+xmlns:h="http://java.sun.com/jsf/html">
+<div class="col-md-4">
+	<table class="table table-bordered">
+		<thead>
+			<tr>
+				<th class="entete">#{homeController.entete}</th>
+			</tr>
+		</thead>
+		<tbody>
+			<c:forEach var="libelle" items="#{homeController.list}">
+			<tr>
+				<td>${libelle}</td>
+			</tr>
+			</c:forEach>
+		</tbody>
+	</table>
+</div>
+</ui:composition>
