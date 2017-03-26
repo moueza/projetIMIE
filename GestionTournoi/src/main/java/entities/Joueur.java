@@ -1,12 +1,16 @@
 package entities;
 
+import java.util.List;
+
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 /**
@@ -22,31 +26,36 @@ public class Joueur {
 	@Id
 	@Column(name = "idjoueur", nullable = false, unique = true)
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public Integer idjoueur;
+	private Integer idjoueur;
 
 	/**
 	 * Instance de {@link String} correspondant au nom d'un joueur.
 	 */
 	@Column(name = "nom", length = 50)
-	public String nom;
+	private String nom;
 
 	/**
 	 * Instance de {@link String} correspondant au prénom d'un joueur.
 	 */
 	@Column(name = "prenom", length = 50)
-	public String prenom;
+	private String prenom;
 
 	/**
 	 * Instance de {@link enum.Sexe} correspondant au genre d'un joueur.
 	 */
 	@Column(name = "sexe", length = 50)
-	public String sexe;
+	private String sexe;
 
 	/**
 	 * Instance de {@link Nation} correspondant à la nationnalité d'un joueur.
 	 */
-	@ManyToOne(cascade = CascadeType.ALL)
-	public Nation nation;
+	@ManyToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name="idNation")
+	private Nation nation;
+	
+	@OneToMany
+	@JoinColumn(name="idJoueur")
+	private List<Equipe> lesEquipes;
 
 	/**
 	 * Constructeur à vide de Joueur

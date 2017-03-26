@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -21,31 +22,29 @@ public class Arbitre {
 	@Id
 	@Column(name = "idarbitre", nullable = false, unique = true)
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	public Integer idarbitre;
-	
-	@ManyToOne
-	public Integer idnation;
+	private Integer idarbitre;
 	
 	/**
 	 * Instance de {@link String} correspondant au nom d'un joueur.
 	 */
 	@Column(name = "nom", length = 50)
-	public String nom;
+	private String nom;
 	
 	/**
 	 * Instance de {@link String} correspondant au nom d'un joueur.
 	 */
 	@Column(name = "nom", length = 50)
-	public String prenom;
+	private String prenom;
 	
 	/**
 	 * Instance de {@link String} correspondant au nom d'un joueur.
 	 */
 	@Column(name = "niveau", length = 50)
-	public String niveau;
+	private String niveau;
 	
-	@ManyToOne(cascade = CascadeType.ALL)
-	public Nation nation;
+	@ManyToOne(cascade = CascadeType.PERSIST)
+	@JoinColumn(name="idNation")
+	private Nation nation;
 
 	public Arbitre(String nom, String prenom, String niveau, Nation nation) {
 		super();
@@ -58,10 +57,7 @@ public class Arbitre {
 	public Integer getIdarbitre() {
 		return idarbitre;
 	}
-	
-	public Integer getIdnation() {
-		return idnation;
-	}
+
 
 	public String getNom() {
 		return nom;

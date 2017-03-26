@@ -28,5 +28,13 @@
 	<listener>
 		<listener-class>com.sun.faces.config.ConfigureListener</listener-class>
 	</listener>
+	<security-constraint>
+		<display-name>Restrict direct access to XHTML files</display-name>
+		<web-resource-collection>
+			<web-resource-name>XHTML files</web-resource-name>
+			<url-pattern>*.xhtml</url-pattern>
+		</web-resource-collection>
+		<auth-constraint />
+	</security-constraint>
 </web-app>
 

@@ -33,10 +33,13 @@
 					<div class="form-group">
 						<h:outputLabel>Nom</h:outputLabel>
 						<h:inputText id="nom" class="form-control"
-							value="#{courtController.court}" placeholder="Nom"></h:inputText>
+							value="#{courtController.court}" placeholder="Nom">
+							<f:validateRegex pattern="[a-zA-Z]+" />
+						</h:inputText>
+						<h:message for="nom" errorStyle="color:red; display:block"/>
 					</div>
 					<h:commandButton class="btn btn-primary" value="Enregistrer"
-						action="#{courtController.traitementJoueur}"></h:commandButton>
+						action="#{courtController.traitementCourt}"></h:commandButton>
 				</h:form>
 			</div>
 		</div>
